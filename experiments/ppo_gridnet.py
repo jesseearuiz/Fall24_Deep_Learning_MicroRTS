@@ -211,6 +211,7 @@ class Agent(nn.Module):
             ]
             action = torch.stack([categorical.sample() for categorical in multi_categoricals])
         else:
+            #just in case
             invalid_action_masks = invalid_action_masks.view(-1, invalid_action_masks.shape[-1])
             action = action.view(-1, action.shape[-1]).T
             split_invalid_action_masks = torch.split(invalid_action_masks, envs.action_plane_space.nvec.tolist(), dim=1)
