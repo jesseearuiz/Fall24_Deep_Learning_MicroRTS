@@ -1,3 +1,6 @@
 [submodule "gym_microrts/microrts"]
 	path = gym_microrts/microrts
 	url = https://github.com/Farama-Foundation/MicroRTS.git
+[submodule "experiments/JLP/VQVAE/vqvae-pytorch"]
+	path = experiments/JLP/VQVAE/vqvae-pytorch
+	url = https://github.com/airalcorn2/vqvae-pytorch.git

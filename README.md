@@ -2,16 +2,8 @@
     <img src="https://raw.githubusercontent.com/Farama-Foundation/MicroRTS-Py/master/micrortspy-text.png" width="500px"/>
 </p>
 
-Formerly Gym-μRTS/Gym-MicroRTS
-
-[<img src="https://img.shields.io/badge/discord-gym%20microrts-green?label=Discord&logo=discord&logoColor=ffffff&labelColor=7289DA&color=2c2f33">](https://discord.gg/DdJsrdry6F)
-[<img src="https://github.com/vwxyzjn/gym-microrts/workflows/build/badge.svg">](https://github.com/Farama-Foundation/MicroRTS-Py/actions)
-[<img src="https://badge.fury.io/py/gym-microrts.svg">](
-https://pypi.org/project/gym-microrts/)
-
-This repo contains the source code for the gym wrapper of μRTS authored by [Santiago Ontañón](https://github.com/santiontanon/microrts).
-
-MicroRTS-Py will eventually be updated, maintained, and made compliant with the standards of the Farama Foundation (https://farama.org/project_standards). However, this is currently a lower priority than other projects we're working to maintain. If you'd like to contribute to development, you can join our discord server here- https://discord.gg/jfERDCSw.
+## 
+This repo contains the source code for the gym wrapper of μRTS authored by [Santiago Ontañón](https://github.com/santiontanon/microrts) and experiments written by Julian Pandelakis and Jessee Ruiz. The following installation instructions are those relevant to our work (no partial observations or multi-map training) and environment space (actions space and observation space) tables are the work of the maintainers of MicroRTS-Py.
 
 ![demo.gif](static/fullgame.gif)
 
@@ -47,8 +39,6 @@ python ppo_gridnet.py \
     --capture-video \
     --seed 1
 ```
-
-[![asciicast](https://asciinema.org/a/586754.svg)](https://asciinema.org/a/586754)
 
 For running a partial observable example, tune the `partial_obs` argument.
 ```bash
@@ -156,19 +146,6 @@ rm league.csv league.db
 python league.py --evals randomBiasedAI workerRushAI lightRushAI coacAI
 ```
 
-## Multi-maps support
-
-The training script allows you to train the agents with more than one maps and evaluate with more than one maps. Try executing:
-
-```
-cd experiments
-python ppo_gridnet.py \
-    --train-maps maps/16x16/basesWorkers16x16B.xml maps/16x16/basesWorkers16x16C.xml maps/16x16/basesWorkers16x16D.xml maps/16x16/basesWorkers16x16E.xml maps/16x16/basesWorkers16x16F.xml \
-    --eval-maps maps/16x16/basesWorkers16x16B.xml maps/16x16/basesWorkers16x16C.xml maps/16x16/basesWorkers16x16D.xml maps/16x16/basesWorkers16x16E.xml maps/16x16/basesWorkers16x16F.xml
-```
-
-where `--train-maps` allows you to specify the training maps and `--eval-maps` the evaluation maps. `--train-maps` and `--eval-maps` do not have to match (so you can evaluate on maps the agent has never trained on before).
-
 ## Known issues
 
 [ ] Rendering does not exactly work in macos. See https://github.com/jpype-project/jpype/issues/906
@@ -181,9 +158,6 @@ where `--train-maps` allows you to specify the training maps and `--eval-maps` t
 * AIIDE 2020 Strategy Games Workshop: [Action Guidance: Getting the Best of Training Agents with Sparse Rewards and Shaped Rewards](https://arxiv.org/abs/2010.03956),
 * AIIDE 2019 Strategy Games Workshop: [Comparing Observation and Action Representations for Deep Reinforcement Learning in MicroRTS](https://arxiv.org/abs/1910.12134),
 
-## PettingZoo API
-
-We wrapped our Gym-µRTS simulator into a PettingZoo environment, which is defined in `gym_microrts/pettingzoo_api.py`. An example usage of the Gym-µRTS PettingZoo environment can be found in `hello_world_pettingzoo.py`.
 
 
 ## Cite this project
@@ -232,6 +206,3 @@ To cite the invalid action masking technique used in our training script:
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
-# Fall24_Deep_Learning_MicroRTS
-# Fall24_Deep_Learning_MicroRTS
-# Fall24_Deep_Learning_MicroRTS
