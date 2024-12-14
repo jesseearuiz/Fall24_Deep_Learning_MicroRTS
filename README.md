@@ -5,10 +5,10 @@
 ## Source Code Credit
 This repo contains the source code for the gym wrapper of μRTS authored by [Santiago Ontañón](https://github.com/santiontanon/microrts) and experiments written by Julian Pandelakis and Jessee Ruiz. The following installation instructions are those relevant to our work (no partial observations or multi-map training) and environment space (actions space and observation space) tables are the work of the maintainers of MicroRTS-Py.
 
-## Evaluation Quickstart
-# Installation 
+# Evaluation Quickstart
+## Installation 
 First, clone the github repo and follow the installation instructions. Contact Julian Pandelakis at pandelak@bc.edu or (602) 500-8778 if you have any issues with installation. You will likely have to install an older version of python than what is currently installed on your machine. Use `sudo apt-get install python3.9` for the version we used. 
-# Evaluation and video recording
+## Evaluation and video recording
 ```bash
 # Activate your poetry shell first, otherwise prefix all commands to run a program with `poetry run`
 cd experiments
